@@ -27,30 +27,33 @@ public class Controllers {
     public static TalonSRX INTAKEPIVOT_T  = new TalonSRX(12);
 
     private static NeutralMode ELEVATOR_NEUTRAL_MODE = NeutralMode.Brake;
+    private static NeutralMode DRIVE_NEUTRAL_MODE = NeutralMode.Brake;
+    private static NeutralMode INTAKE_NEUTRAL_MODE = NeutralMode.Brake;
+    private static NeutralMode CLIMBER_NEUTRAL_MODE = NeutralMode.Brake;
 
     public static void init() {
-        LEFT_DRIVE1_T.setNeutralMode(NeutralMode.Brake);
-        LEFT_DRIVE2_V.setNeutralMode(NeutralMode.Brake);
-        LEFT_DRIVE3_V.setNeutralMode(NeutralMode.Brake);
+        LEFT_DRIVE1_T.setNeutralMode(DRIVE_NEUTRAL_MODE);
+        LEFT_DRIVE2_V.setNeutralMode(DRIVE_NEUTRAL_MODE);
+        LEFT_DRIVE3_V.setNeutralMode(DRIVE_NEUTRAL_MODE);
 
         LEFT_DRIVE2_V.follow(LEFT_DRIVE1_T);
         LEFT_DRIVE3_V.follow(LEFT_DRIVE1_T);
 
-        RIGHT_DRIVE1_T.setNeutralMode(NeutralMode.Brake);
-        RIGHT_DRIVE2_V.setNeutralMode(NeutralMode.Brake);
-        RIGHT_DRIVE3_V.setNeutralMode(NeutralMode.Brake);
+        RIGHT_DRIVE1_T.setNeutralMode(DRIVE_NEUTRAL_MODE);
+        RIGHT_DRIVE2_V.setNeutralMode(DRIVE_NEUTRAL_MODE);
+        RIGHT_DRIVE3_V.setNeutralMode(DRIVE_NEUTRAL_MODE);
 
         RIGHT_DRIVE2_V.follow(RIGHT_DRIVE1_T);
         RIGHT_DRIVE3_V.follow(RIGHT_DRIVE1_T);
 
-        CLIMBER1_V.setNeutralMode(NeutralMode.Brake);
-        CLIMBER2_V.setNeutralMode(NeutralMode.Brake);
+        CLIMBER1_V.setNeutralMode(CLIMBER_NEUTRAL_MODE);
+        CLIMBER2_V.setNeutralMode(CLIMBER_NEUTRAL_MODE);
 
         ELEVATOR1_T.setNeutralMode(ELEVATOR_NEUTRAL_MODE);
         ELEVATOR2_T.setNeutralMode(ELEVATOR_NEUTRAL_MODE);
 
-        INTAKETOP_T.setNeutralMode(NeutralMode.Brake);
-        INTAKEBOTTOM_T.setNeutralMode(NeutralMode.Brake);
-        INTAKEPIVOT_T.setNeutralMode(NeutralMode.Brake); 
+        INTAKETOP_T.setNeutralMode(INTAKE_NEUTRAL_MODE);
+        INTAKEBOTTOM_T.setNeutralMode(INTAKE_NEUTRAL_MODE);
+        INTAKEPIVOT_T.setNeutralMode(INTAKE_NEUTRAL_MODE); 
     }
 }
