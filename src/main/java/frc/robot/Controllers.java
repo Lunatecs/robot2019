@@ -50,7 +50,5 @@ public class Controllers {
         INTAKETOP_T.setNeutralMode(NeutralMode.Brake);
         INTAKEBOTTOM_T.setNeutralMode(NeutralMode.Brake);
         INTAKEPIVOT_T.setNeutralMode(NeutralMode.Brake); 
-        
-        //TODO Initialize Lunatecsdrive etc with motors.
     }
 }
