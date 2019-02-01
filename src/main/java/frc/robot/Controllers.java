@@ -26,6 +26,8 @@ public class Controllers {
     public static TalonSRX INTAKEBOTTOM_T = new TalonSRX(7);
     public static TalonSRX INTAKEPIVOT_T  = new TalonSRX(12);
 
+    private static NeutralMode ELEVATOR_NEUTRAL_MODE = NeutralMode.Brake;
+
     public static void init() {
         LEFT_DRIVE1_T.setNeutralMode(NeutralMode.Brake);
         LEFT_DRIVE2_V.setNeutralMode(NeutralMode.Brake);
@@ -44,8 +46,8 @@ public class Controllers {
         CLIMBER1_V.setNeutralMode(NeutralMode.Brake);
         CLIMBER2_V.setNeutralMode(NeutralMode.Brake);
 
-        ELEVATOR1_T.setNeutralMode(NeutralMode.Brake);
-        ELEVATOR2_T.setNeutralMode(NeutralMode.Brake);
+        ELEVATOR1_T.setNeutralMode(ELEVATOR_NEUTRAL_MODE);
+        ELEVATOR2_T.setNeutralMode(ELEVATOR_NEUTRAL_MODE);
 
         INTAKETOP_T.setNeutralMode(NeutralMode.Brake);
         INTAKEBOTTOM_T.setNeutralMode(NeutralMode.Brake);
